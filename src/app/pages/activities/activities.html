@@ -1,0 +1,154 @@
+<section class="activities-page">
+<!--<div class="year-filter">
+  <label>वर्ष निवडा:</label>
+  <select id="yearSelect" onchange="filterByYear()">
+    <option value="all">सर्व वर्षे</option>
+    <option value="2024">2024</option>
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+  </select>
+</div>-->
+
+  <!-- EDUCATION -->
+  <section id="education" class="activity-section">
+  <h2>शैक्षणिक उपक्रम</h2>
+
+  <div class="year-block" data-year="2023" data-category="education">
+    <!--<h3>2024</h3>-->
+    <p> विद्यार्थ्यांना गुणगौरव सोहळा</p>
+
+    <div class="photo-slider">
+  <button class="nav prev" (click)="scrollLeft(edu)">‹</button>
+
+
+  <div class="photo-grid" #edu>
+    <img src="images/edu-2024-1.jpeg" (click)="openImage('images/edu-2024-1.jpeg')">
+    <img src="images/edu-2024-2.jpeg" (click)="openImage('images/edu-2024-2.jpeg')">
+    <img src="images/edu-2024-3.jpeg" (click)="openImage('images/edu-2024-3.jpeg')">
+    <img src="images/edu-2024-4.jpeg" (click)="openImage('images/edu-2024-4.jpeg')">
+    <img src="images/edu-2024-5.jpeg" (click)="openImage('images/edu-2024-5.jpeg')">
+    <img src="images/edu-2024-6.jpeg" (click)="openImage('images/edu-2024-6.jpeg')">
+  </div>
+
+  <button class="nav next" (click)="scrollRight(edu)">›</button>
+</div>
+
+  </div>
+
+  <!--<div class="year-block" data-year="2022">
+    <h3>2022</h3>
+    <p>10 विद्यार्थ्यांना शिष्यवृत्ती</p>
+
+    <div class="photo-grid">
+      <img src="images/edu-2024-1.jpg">
+      <img src="images/edu-2024-2.jpg">
+    </div>
+  </div>
+
+  <div class="year-block" data-year="2023">
+    <h3>2023</h3>
+    <p>स्पर्धा परीक्षा मार्गदर्शन शिबिर</p>
+
+    <div class="photo-grid">
+      <img src="images/edu-2023-1.jpg">
+    </div>
+  </div>
+</section>-->
+
+
+
+  <!-- CULTURE -->
+  <section id="culture" class="activity-section">
+  <h2>सांस्कृतिक कार्यक्रम</h2>
+
+  <div class="year-block" data-year="2024" data-category="culture">
+    <p class="left-highlight">वार्षिक स्नेहसंमेलन -2025</p>
+    <div class="photo-slider">
+  <button class="nav prev" (click)="scrollLeft(culture)">‹</button>
+
+
+    <div class="photo-grid" #culture>
+      <img src="images/culture-1.jpeg">
+      <img src="images/culture-2.jpeg">
+      <img src="images/culture-3.jpeg">
+      <img src="images/culture-4.jpeg">
+      <img src="images/culture-5.jpeg">
+    </div>
+    <button class="nav next" (click)="scrollRight(culture)">›</button>
+</div>
+  </div>
+</section>
+
+
+
+  <!-- SOCIAL -->
+  <section id="social" class="activity-section">
+  <h2>सामाजिक उपक्रम</h2>
+
+  <div class="year-block" data-year="2023" data-category="social">
+    <h3>2023</h3>
+    <p>आरोग्य शिबिर – 120 ग्रामस्थ लाभार्थी</p>
+    <div class="photo-slider">
+    <button class="nav prev" (click)="scrollLeft(social)">‹</button>
+
+    <div class="photo-grid" #social>
+      <img src="images/social-1.jpeg">
+      <img src="images/social-2.jpeg">
+      <img src="images/social-3.jpeg">
+      <img src="images/social-4.jpeg">
+      <img src="images/social-5.jpeg">
+      <img src="images/social-4.jpeg">
+      <img src="images/social-4.jpeg">
+    </div>
+    <button class="nav next" (click)="scrollRight(social)">›</button>
+  </div>
+  </div>
+</section>
+
+
+</section>
+<script>
+function applyFilters(selectedCategory = "all", selectedYear = "all") {
+  const blocks = document.querySelectorAll(".year-block");
+
+  blocks.forEach(block => {
+    const blockCategory = block.dataset.category;
+    const blockYear = block.dataset.year;
+
+    const categoryMatch = (selectedCategory === "all" || blockCategory === selectedCategory);
+    const yearMatch = (selectedYear === "all" || blockYear === selectedYear);
+
+    block.style.display = (categoryMatch && yearMatch) ? "block" : "none";
+  });
+}
+
+/* SLIDER BUTTONS */
+document.querySelectorAll('.photo-slider').forEach(slider => {
+  const grid = slider.querySelector('.photo-grid');
+  slider.querySelector('.next').onclick = () =>
+    grid.scrollBy({ left: 300, behavior: 'smooth' });
+  slider.querySelector('.prev').onclick = () =>
+    grid.scrollBy({ left: -300, behavior: 'smooth' });
+});
+
+/* FULLSCREEN POPUP */
+const popup = document.createElement('div');
+popup.className = 'image-popup';
+popup.innerHTML = `<span class="popup-close">&times;</span><img>`;
+document.body.appendChild(popup);
+
+const popupImg = popup.querySelector('img');
+const closeBtn = popup.querySelector('.popup-close');
+
+document.querySelectorAll('.photo-grid img').forEach(img => {
+  img.addEventListener('click', () => {
+    popupImg.src = img.src;
+    popup.style.display = 'flex';
+  });
+});
+
+closeBtn.onclick = () => popup.style.display = 'none';
+popup.onclick = e => {
+  if (e.target === popup) popup.style.display = 'none';
+};
+</script>

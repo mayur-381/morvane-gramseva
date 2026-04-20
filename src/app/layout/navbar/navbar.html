@@ -1,0 +1,44 @@
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <img src="images/navbar-banner.png" alt="Banner" />
+</div>
+
+<mat-toolbar color="primary" class="navbar">
+
+  <!-- Left: Logo & Name -->
+  <div class="brand">
+    <mat-icon class="logo">account_balance</mat-icon>
+    <span class="title">मौजे मोरवणे मुंबई संघ</span>
+  </div>
+
+  <span class="spacer"></span>
+
+  <!-- Desktop Menu -->
+  <nav class="menu desktop-menu">
+    <a mat-button routerLink="/" routerLinkActive="active">मुखपृष्ठ</a>
+    <a mat-button routerLink="/about" routerLinkActive="active">आमच्याविषयी</a>
+    <a mat-button routerLink="/activities" routerLinkActive="active">उपक्रम</a>
+    <a mat-button routerLink="/committee" routerLinkActive="active">समिती</a>
+    <a mat-button routerLink="/culture" routerLinkActive="active">माझं गाव</a>
+
+   <!---- <a mat-raised-button color="accent"
+       routerLink="/donation" class="donate-btn">
+      
+    </a>-->
+  </nav>
+
+  <!-- Mobile Menu -->
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="mobile-menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/">मुखपृष्ठ</button>
+    <button mat-menu-item routerLink="/about">आमच्याविषयी</button>
+    <button mat-menu-item routerLink="/activities">उपक्रम</button>
+    <button mat-menu-item routerLink="/committee">समिती</button>
+    <button mat-menu-item routerLink="/culture">माझं गाव</button>
+    <!--<button mat-menu-item routerLink="/donation">Donate</button>-->
+  </mat-menu>
+
+</mat-toolbar>

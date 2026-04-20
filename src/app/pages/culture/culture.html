@@ -1,0 +1,225 @@
+<section class="village-page">
+
+  <h1 class="page-title">माझं गाव – संस्कृती,उत्सव व पर्यटन</h1>
+
+  <!-- GANPATI -->
+  <section class="gallery-section">
+    <h2>🎉 गणपती उत्सव</h2>
+    <p class="section-desc">दरवर्षी मोठ्या उत्साहात साजरा होणारा गणपती उत्सव</p>
+
+    <div class="photo-slider">
+      <button class="nav prev" (click)="scrollLeft(ganpati)">‹</button>
+
+      <div class="photo-grid" #ganpati>
+        <div class="image-wrap"></div>
+        <img src="images/ganpati-1.jpeg" (click)="openImage('images/ganpati-1.jpeg')">
+        <img src="images/ganpati-2.jpeg" (click)="openImage('images/ganpati-2.jpeg')">
+        <img src="images/ganpati-3.jpeg" (click)="openImage('images/ganpati-3.jpeg')">
+        <img src="images/ganpati-4.jpeg" (click)="openImage('images/ganpati-4.jpeg')">
+        <img src="images/ganpati-5.jpeg" (click)="openImage('images/ganpati-5.jpeg')">
+      
+      </div>
+
+      <button class="nav next" (click)="scrollRight(ganpati)">›</button>
+    </div>
+  </section>
+
+  <!-- SHIMGA -->
+  <section class="gallery-section">
+    <h2>🔥 शिमगा उत्सव</h2>
+
+    <div class="photo-slider">
+      <button class="nav prev" (click)="scrollLeft(shimga)">‹</button>
+
+      <div class="photo-grid" #shimga>
+        <div class="media-item"><img src="images/shimga-1.jpeg" (click)="openImage('images/shimga-1.jpeg')"></div>
+        <div class="media-item video-item"><video controls> <source src="videos/shimga-festival.mp4" type="video/mp4"> </video></div>
+        <img src="images/shimga-2.jpeg" (click)="openImage('images/shimga-2.jpeg')">
+        <div class="media-item video-item"><video controls poster="images/video2.jpg"><source src="videos/shimga1-festival.mp4" type="video/mp4"></video></div>
+        <img src="images/shimga-3.jpeg" (click)="openImage('images/shimga-3.jpeg')">
+        <!--<img src="images/shimga-3.jpg" (click)="openImage('images/shimga-3.jpg')">--> 
+      </div>
+        <button class="nav next" (click)="scrollRight(shimga)">›</button>
+    </div>
+  </section>
+
+ <!---- <section class="festival-video">
+  <h2>🎥 उत्सवाचे व्हिडिओ</h2>
+
+  <div class="video-slider">
+
+    <button class="video-nav prev" (click)="scrollVideo(videoTrack, -1)">‹</button>
+
+    <div class="video-track" #videoTrack>
+
+      <div class="media-item video-item"><video controls>
+        <source src="videos/shimga-festival.mp4" type="video/mp4">
+      </video></div>
+
+      <video controls poster="images/video2.jpg">
+        <source src="videos/shimga1-festival.mp4" type="video/mp4">
+      </video>
+
+      <video controls poster="images/video3.jpg">
+        <source src="videos/ganpati3.mp4" type="video/mp4">
+      </video>
+
+      <video controls poster="images/video4.jpg">
+        <source src="videos/ganpati4.mp4" type="video/mp4">
+      </video>
+
+    </div>
+
+    <button class="video-nav next" (click)="scrollVideo(videoTrack, 1)">›</button>
+
+  </div>
+</section>-->
+
+  <!-- JATRA -->
+  <section class="gallery-section">
+    <h2>🪔 ग्राम जत्रा</h2>
+
+    <div class="photo-slider">
+      <button class="nav prev" (click)="scrollLeft(jatra)">‹</button>
+
+      <div class="photo-grid" #jatra>
+        <img src="images/jatra-1.jpeg" (click)="openImage('images/jatra-1.jpeg')">
+        <div class="media-item video-item"> <video controls><source src="videos/jatra-festival1.mp4" type="video/mp4"></video></div>
+        <div class="media-item video-item"> <video controls><source src="videos/jatra-festival2.mp4" type="video/mp4"></video></div>
+        <div class="media-item video-item"> <video controls> <source src="videos/jatra-festival.mp4" type="video/mp4"></video></div>
+        <!--<img src="images/jatra-2.jpg" (click)="openImage('images/jatra-2.jpg')">-->
+      </div>
+
+      <button class="nav next" (click)="scrollRight(jatra)">›</button>
+    </div>
+  </section>
+
+  <!--<section class="festival-video">
+  <h2>🎥 उत्सवाचे व्हिडिओ</h2>
+
+  <div class="video-slider">
+
+    <button class="video-nav prev" (click)="scrollVideo(videoTrack2, -1)">‹</button>
+
+    <div class="video-track" #videoTrack2>
+
+     <div class="media-item video-item"> <video controls>
+        <source src="videos/jatra-festival.mp4" type="video/mp4">
+      </video></div>
+
+      <video controls>
+        <source src="videos/jatra-festival1.mp4" type="video/mp4">
+      </video>
+
+      <video controls>
+        <source src="videos/jatra-festival2.mp4" type="video/mp4">
+      </video>
+      <button class="video-nav next" (click)="scrollVideo(videoTrack2, 1)">›</button>
+
+  </div>
+  </div>
+</section>-->
+
+  <section class="gallery-section">
+    <h2>🪔 शिवजयंती उत्सव</h2>
+
+    <div class="photo-slider">
+      <button class="nav prev" (click)="scrollLeft(shivjayanti)">‹</button>
+
+      <div class="photo-grid" #shivjayanti>
+        <img src="images/shivjayanti-1.jpeg" (click)="openImage('images/shivjayanti-1.jpeg')">
+        <img src="images/shivjayanti-2.jpeg" (click)="openImage('images/shivjayanti-2.jpeg')">
+        <img src="images/shivjayanti-3.jpeg" (click)="openImage('images/shivjayanti-3.jpeg')">
+        <img src="images/shivjayanti-4.jpeg" (click)="openImage('images/shivjayanti-4.jpeg')">
+        <img src="images/shivjayanti-5.jpeg" (click)="openImage('images/shivjayanti-5.jpeg')">
+        <img src="images/shivjayanti-6.jpeg" (click)="openImage('images/shivjayanti-6.jpeg')">
+      </div>
+
+      <button class="nav next" (click)="scrollRight(shivjayanti)">›</button>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>📍 प्रेक्षणीय स्थळे</h2>
+    <div class="photo-grid">
+        <button class="nav prev" (click)="scrollLeft(jatra)">‹</button>
+        <div class="photo-grid" #jatra>
+      <img src="images/place-1.jpeg" (click)="openImage('images/place-1.jpeg')">
+      <img src="images/place-2.jpeg" (click)="openImage('images/place-2.jpeg')">
+      <img src="images/place-3.jpeg" (click)="openImage('images/place-3.jpeg')">
+      </div>
+      <button class="nav next" (click)="scrollRight(jatra)">›</button>
+    </div>
+  </section>
+
+  <!-- FARMING SECTION -->
+<section class="gallery-section farming-section">
+  <h2>🌾 गावची शेती</h2>
+  <p class="section-desc">शेतीचे फोटो व व्हिडिओ</p>
+
+  <div class="photo-slider">
+    <button class="nav prev" (click)="scrollLeft(farming)">‹</button>
+
+    <div class="photo-grid" #farming>
+
+      <!-- IMAGE -->
+      <div class="media-item">
+        <img
+          src="images/farm-1.jpeg"
+          (click)="openImage('images/farm-1.jpeg')"
+        />
+      </div>
+
+      <!-- VIDEO -->
+      <div class="media-item video-item">
+        <video controls>
+          <source src="videos/farm-2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="media-item">
+        <img
+          src="images/farm-3.jpeg"
+          (click)="openImage('images/farm-3.jpeg')"
+        />
+      </div>
+
+      <!-- IMAGE -->
+      <div class="media-item">
+        <img
+          src="images/farm-5.jpg"
+          (click)="openImage('images/farm-5.jpg')"
+        />
+      </div>
+
+      <!-- VIDEO 
+      <div class="media-item video-item">
+        <video controls>
+          <source src="videos/farm-4.mp4" type="video/mp4">
+        </video>
+      </div>-->
+      
+
+       
+    </div>
+
+    <button class="nav next" (click)="scrollRight(farming)">›</button>
+  </div>
+</section>
+
+
+
+  <!-- FULLSCREEN -->
+  <div class="fullscreen-overlay" *ngIf="selectedImage" (click)="closeImage()">
+    <img
+      [src]="selectedImage"
+      class="fullscreen-img"
+      (click)="$event.stopPropagation()"
+    >
+  </div>
+
+</section>
+
+
+

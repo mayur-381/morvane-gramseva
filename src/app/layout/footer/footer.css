@@ -1,0 +1,126 @@
+/* ===============================
+   FOOTER (BANNER MATCH THEME)
+================================ */
+.footer {
+  background: linear-gradient(
+    90deg,
+    #f97316,   /* saffron */
+    #fb923c,   /* orange */
+    #fde047    /* yellow */
+  );
+
+  border-top: 4px solid #ea580c;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.4);
+}
+
+/* ===============================
+   FOOTER LAYOUT
+================================ */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  padding: 30px 20px;
+}
+
+/* ===============================
+   MARATHI BANNER TEXT STYLE
+   (RED + WHITE OUTLINE + SHADOW)
+================================ */
+.marathi-banner-text {
+  color: #e11d48;                 /* red */
+
+  -webkit-text-stroke: 1.5px #fff; /* thinner outline */
+  paint-order: stroke fill;
+
+  text-shadow:
+    1px 1px 2px rgba(0,0,0,0.4);   /* SOFT shadow only */
+
+  font-weight: 1000;
+}
+/* softer version for paragraphs */
+.marathi-banner-text.soft {
+  -webkit-text-stroke: 2px #fff;
+  font-weight: 700;
+}
+
+/* ===============================
+   WHATSAPP BUTTON (PREMIUM)
+================================ */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 14px;
+  padding: 10px 22px;
+
+  background: linear-gradient(
+    135deg,
+    #fff7ed,
+    #fde68a
+  );
+
+  color: #7c2d12;
+  font-weight: 700;
+
+  border-radius: 999px;
+  border: 1px solid rgba(124,45,18,0.25);
+
+  text-decoration: none;
+
+  box-shadow:
+    0 4px 10px rgba(124,45,18,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+
+  transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 18px rgba(124,45,18,0.35);
+}
+
+/* ===============================
+   MAP
+================================ */
+.footer iframe {
+  width: 100%;
+  height: 180px;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+/* ===============================
+   FOOTER BOTTOM BAR
+================================ */
+.footer-bottom {
+  text-align: center;
+  padding: 14px 10px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  background: rgba(124,45,18,0.15);
+  color: #4a1d0f;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer iframe {
+    height: 160px;
+  }
+}

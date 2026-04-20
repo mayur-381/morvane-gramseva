@@ -1,0 +1,169 @@
+<!-- HERO SECTION -->
+<section class="hero">
+
+  <video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  >
+    <source src="/videos/hero-bg2.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+
+  <!-- OVERLAY + CONTENT -->
+  <div class="hero-overlay">
+    <h1>मौजे मोरवणे ग्रामसेवा संघ, मुंबई</h1>
+    <p>
+      ग्रामविकास, शिक्षण आणि सामाजिक एकोप्यासाठी कार्यरत संस्था
+    </p>
+
+    <div class="hero-buttons">
+  <button
+    class="btn primary"
+    routerLink="/activities"
+  >
+    आमचे उपक्रम
+  </button>
+
+  <!--<button
+    class="btn outline"
+    routerLink="/contact"
+  >
+    संपर्क
+  </button>-->
+</div>
+</div>
+
+
+</section>
+
+
+<!-- ACTIVITIES CARDS -->
+<section class="activities">
+
+  <a routerLink="/activities" class="activity-link">
+  <div class="activity-card">
+    <div class="activity-image">
+    <img src="images/education.jpg" alt="शैक्षणिक उपक्रम">
+    </div>
+    <h3>शैक्षणिक उपक्रम</h3>
+    <p>विद्यार्थ्यांसाठी शिष्यवृत्ती, मार्गदर्शन व स्पर्धा परीक्षा सहाय्य.</p>
+  </div>
+  </a>
+
+  <a routerLink="/activities" class="activity-link">
+  <div class="activity-card">
+    <div class="activity-image">
+    <img src="images/culture.jpeg" alt="सांस्कृतिक कार्यक्रम">
+    </div>
+    <h3>सांस्कृतिक कार्यक्रम</h3>
+    <p>सण, उत्सव, कीर्तन, पारंपरिक कला व संस्कृती जतन.</p>
+  </div>
+  </a>
+
+  <a routerLink="/activities" class="activity-link">
+  <div class="activity-card">
+    <div class="activity-image">
+    <img src="images/social.jpeg" alt="सामाजिक कार्य">
+    </div>
+    <h3>सामाजिक कार्य</h3>
+    <p>आरोग्य शिबिरे, स्वच्छता मोहिम व जनजागृती.</p>
+  </div>
+  </a>
+</section>
+
+
+<section class="media-section">
+
+  <h2 class="section-title"> मोरवणे गावाबाबत माध्यमांचे वार्तांकन</h2>
+  <p class="section-desc">
+    विविध वृत्तवाहिन्या, वर्तमानपत्रे व डिजिटल माध्यमांत प्रसिद्ध झालेल्या बातम्या
+  </p>
+
+  <div class="swipe-hint-mobile">
+  Swipe <span>→</span>
+</div>
+
+
+  <div class="media-slider">
+
+    <button class="nav prev" (click)="scrollLeft(mediaTrack)">‹</button>
+
+    <div class="media-track" #mediaTrack>
+
+      <!-- NEWS VIDEO -->
+      <div class="media-card video-card">
+        <video controls>
+          <source src="videos/farm-4.mp4" type="video/mp4">
+        </video>
+        <p>गावातील जमीन बाहेरच्या ना विकणार नाही : ग्रामस्थांचा निर्णय</p>
+      </div>
+
+      <!-- NEWS IMAGE 
+      <div class="media-card image-card">
+        <img src="images/news-paper1.jpg" (click)="openImage('images/news-paper1.jpg')">
+        <p>दैनिक सकाळ – ग्रामविकास उपक्रम</p>
+      </div>-->
+
+      <!-- NEWS VIDEO -->
+      <div class="media-card video-card">
+        <video controls>
+          <source src="videos/news-1.mp4" type="video/mp4">
+        </video>
+        <p>सैनिकांचे गाव म्हणून ओळख : १००हून अधिक जवान देशसेवेत</p>
+      </div>
+
+      <!-- NEWS VIDEO -->
+      <div class="media-card video-card">
+        <video controls>
+          <source src="videos/news-2.mp4" type="video/mp4">
+        </video>
+        <p>गावचे सुपुत्र अजय ढगळे शहीद</p>
+      </div>
+
+      <!-- NEWS VIDEO -->
+      <div class="media-card video-card">
+        <video controls>
+          <source src="videos/news-3.mp4" type="video/mp4">
+        </video>
+        <p>पिढ्यान्‌पिढ्या देशसेवा : शिंदे कुटुंबाचा अभिमान</p>
+      </div>
+
+      </div>
+
+    <button class="nav next" (click)="scrollRight(mediaTrack)">›</button>
+
+  </div>
+</section>
+
+
+<section class="business-section">
+  <h2 class="section-title">उद्योजक व व्यावसायिक सदस्य</h2>
+
+  <div
+    class="business-slider"
+    (mouseenter)="pauseAutoScroll()"
+    (mouseleave)="startAutoScroll()"
+    (touchstart)="pauseAutoScroll()"
+    (touchend)="resumeAutoScroll()">
+  
+    <button class="nav prev" (click)="scrollLeft(businessTrack)">‹</button>
+
+    <div class="business-track" #businessTrack>
+      <img src="business/business3.jpg">
+      <img src="business/business2.jpg">
+      <img src="business/business1.jpeg">
+      <img src="business/business4.jpg">
+      <img src="business/business5.jpg">
+      <img src="business/business6.jpeg">
+      <img src="business/business7.jpeg">
+      <img src="business/business9.jpeg">
+      <img src="business/business8.jpeg">
+    </div>
+
+    <button class="nav next" (click)="scrollRight(businessTrack)">›</button>
+  </div>
+</section>

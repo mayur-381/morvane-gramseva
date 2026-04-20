@@ -1,0 +1,278 @@
+.village-page {
+  padding: 40px 8%;
+  background: #fffaf5;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 34px;
+  color: #7c2d12;
+  margin-bottom: 60px;
+}
+
+.gallery-section {
+  margin-bottom: 70px;
+}
+
+.gallery-section h2 {
+  font-size: 26px;
+  color: #7c2d12;
+  border-left: 6px solid #f97316;
+  padding-left: 12px;
+}
+
+.festival-video h2 {
+  font-size: 26px;
+  color: #7c2d12;
+  border-left: 6px solid #f97316;
+  padding-left: 12px;
+}
+
+.section-desc {
+  margin: 8px 0 18px;
+  color: #92400e;
+}
+
+/* SLIDER */
+.photo-slider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.photo-grid {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.photo-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-grid img {
+  min-width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* NAV BUTTONS */
+.nav {
+  background: #f97316;
+  border: none;
+  color: white;
+  font-size: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.nav:hover {
+  background: #ea580c;
+}
+
+/* FULLSCREEN */
+.fullscreen-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.fullscreen-img {
+  max-width: 92%;
+  max-height: 92%;
+  border-radius: 12px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .photo-grid img {
+    min-width: 180px;
+    height: 180px;
+  }
+  .nav {
+    display: none;
+  }
+}
+
+.video-slider {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.video-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.video-track::-webkit-scrollbar {
+  display: none;
+}
+
+.video-track video {
+  min-width: 420px;
+  height: 240px;
+  border-radius: 16px;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.25);
+  background: black;
+}
+
+/* Arrow buttons */
+.video-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.55);
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.video-nav.prev { left: -22px; }
+.video-nav.next { right: -22px; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .video-track video {
+    min-width: 280px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .village-page {
+    padding: 30px 5%;
+  }
+
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .gallery-section h2,
+  .festival-video h2 {
+    font-size: 20px;
+    border-left-width: 4px;
+    padding-left: 10px;
+  }
+
+  .section-desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .gallery-section {
+    margin-bottom: 50px;
+  }
+}
+
+.farming-section {
+  background: #fefce8; /* हलका शेती रंग */
+  padding: 40px 30px;
+  border-radius: 18px;
+}
+
+/* images */
+.farming-section .photo-grid img {
+  height: 220px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.media-item {
+  flex-shrink: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.media-item img,
+.media-item video {
+  height: 220px;
+  width: auto;
+  display: block;
+  border-radius: 14px;
+}
+
+/* video specific */
+.video-item video {
+  background: #000;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .media-item img,
+  .media-item video {
+    height: 140px;
+  }
+}
+
+
+/* 📱 Mobile responsive */
+@media (max-width: 768px) {
+  .farming-section {
+    padding: 30px 16px;
+  }
+
+  .farming-section .photo-grid img {
+    height: 140px;
+  }
+}
+
+.media-item {
+  flex-shrink: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.media-item img,
+.media-item video {
+  height: 220px;
+  width: auto;
+  display: block;
+  border-radius: 14px;
+}
+
+.video-item video {
+  background: #000;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .media-item img,
+  .media-item video {
+    height: 140px;
+  }
+}
