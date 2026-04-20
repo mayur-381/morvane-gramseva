@@ -16,13 +16,10 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
-        node-version: 18
+        node-version: 20   # 🔥 IMPORTANT (fixes ESM issue)
 
     - name: Install Dependencies
       run: npm install
 
-    - name: Install Angular CLI
-      run: npm install -g @angular/cli
-
     - name: Build Project
-      run: ng build --configuration production
+      run: npm run build
